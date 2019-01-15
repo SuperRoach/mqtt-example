@@ -11,13 +11,12 @@ function onConnect() {
 
     client.subscribe(myTopic);   //subscribe to our topic
 
-    count++;
-
+  setInterval(()=>{
     message = "The count is now " + count;
 
     console.log(count);
 
-  setInterval(()=>{
+    count++;
    publish(myTopic,                                
   message)
 },5000)};                      //publish count every 5s
